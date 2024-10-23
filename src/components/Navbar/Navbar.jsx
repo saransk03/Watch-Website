@@ -7,13 +7,10 @@ function Navbar() {
   return (
     <>
       <div className="2xl:container mx-auto">
-        <nav className="w-[90%] mx-auto grid grid-cols-1">
-          <div className="flex justify-around items-center">
-              <div className="flex justify-start items-center">
-                <img src="./assests/logo.png" alt="" class="h-[60px]" />
-                <div className="flex justify-center items-center flex-col my-auto">
+        <nav className="w-[90%] mx-auto grid grid-cols-1 py-2">
+          <div className="flex justify-around items-center">             
+              <div className="flex justify-center items-center flex-col my-auto">
                   <h1 className="text-black font-negita mx-[5px] text-[30px]">Leo Watches</h1>
-                </div>
               </div>
               <div className="flex">
                 <ul className="flex gap-10">

@@ -92,3 +92,8 @@
     opacity: 1;
     transition: all 0.3s ease;
 }
+.ads-1{
+    background-image: url(./assests/ads.jpg);
+    background-position: center;
+    background-size: cover;
+}
