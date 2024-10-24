@@ -14,15 +14,15 @@ function Navbar() {
               </div>
               <div className="flex">
                 <ul className="flex gap-10">
-                    <li className="nav-items"><Link>Products   </Link></li>
-                    <li className="nav-items"><Link>Reviews    </Link></li>
-                    <li className="nav-items"><Link>Services   </Link></li>
-                    <li className="nav-items"><Link>Contact us </Link></li>
+                    <Link to={"/"}> <li className="nav-items">Home  </li> </Link>
+                    <Link to={"/products"}> <li className="nav-items">Products  </li> </Link>
+                    <Link to={"/about-us"}> <li className="nav-items">About Us  </li> </Link>
+                    <Link to={"/contact-us"}> <li className="nav-items">Contact us</li> </Link>
                 </ul>
               </div>
               <div className="flex gap-4">
                 <div className="relative flex items-center justify-center icons">
-                    <FiShoppingBag size="20" className="text-black " />
+                    <Link to={"/cart"}><FiShoppingBag size="20" className="text-black " /></Link>
                     <p className="nav-icons">Cart</p>
                 </div>
                 <div className="relative flex items-center justify-center icons">
