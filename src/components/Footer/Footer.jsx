@@ -4,6 +4,7 @@ import { FaTwitter } from "react-icons/fa";
 import { FaLinkedinIn } from "react-icons/fa";
 import { FaYoutube } from "react-icons/fa";
 import { FaThreads } from "react-icons/fa6";
+import { Link } from "react-router-dom";
 
 
 const Footer = () => {
@@ -28,9 +29,9 @@ const Footer = () => {
               <div className="flex flex-col justify-start items-start px-3 py-4"> 
                   <h1 className="text-white font-keania font-[700] text-[20px] tracking-widest">Information</h1>
                   <div className="flex flex-col gap-5 mt-4">
-                    <>
+                    <Link to={"/about-us"}>
                     <p className="text-[10px] font-museo hover:text-white text-gray-400 cursor-pointer">About Us</p>
-                    </>
+                    </Link>
                     <>
                     <p className="text-[10px] font-museo hover:text-white text-gray-400 cursor-pointer">FAQs</p>
                     </>
