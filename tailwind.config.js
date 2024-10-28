@@ -6,6 +6,7 @@ export default {
   ],
   theme: {
     extend: {
+      darkMode: 'class',
       fontFamily: {
         negita: ['Negita', 'sans-serif'],
         keania: ['Keania One', 'cursive'],

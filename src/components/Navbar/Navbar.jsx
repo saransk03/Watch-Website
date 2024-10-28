@@ -6,7 +6,7 @@ import { MdDarkMode } from "react-icons/md";
 function Navbar() {
   return (
     <>
-      <div className="2xl:container mx-auto">
+      <div className="2xl:container mx-auto sticky top-0 z-20 bg-white">
         <nav className="w-[90%] mx-auto grid grid-cols-1 py-2">
           <div className="flex justify-around items-center">             
               <div className="flex justify-center items-center flex-col my-auto">

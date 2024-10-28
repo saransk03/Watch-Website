@@ -9,13 +9,16 @@ import Product from "./components/Product/Product";
 import Contact from "./components/Contact/Contact";
 import About from "./components/About/About";
 import Cart from "./components/Cart/Cart";
+import ProductDetail from "./components/ProductDetail/ProductDetail";
 
 const AppLayout = () => {
   return (
     <>
-      <Navbar />
-      <Outlet />
-      <Footer />
+
+        <Navbar />
+        <Outlet />
+        <Footer />
+
     </>
   );
 };
@@ -40,6 +43,10 @@ const Router = createBrowserRouter([
       {
         path: "/contact-us",
         element: <Contact/>,
+      },
+      {
+        path: "/product-detail",
+        element: <ProductDetail/>,
       },
       {
         path: "/cart",

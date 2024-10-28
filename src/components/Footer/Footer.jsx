@@ -15,13 +15,13 @@ const Footer = () => {
               <div className="flex flex-col justify-start items-start px-3 py-4">
                   <h1 className="text-white font-keania font-[700] text-[20px] tracking-widest">Newsletter</h1>
                   <div className="py-1">
-                    <p className="text-[10px] text-orange-400 font-museo py-1 font-[500]">
+                    <p className="text-[10px] text-[#9B3922] font-museo py-1 font-[500]">
                     Subscribe to receive updates, access to exclusive <br />
                     deals, and more.
                     </p>
                     <form className="flex flex-col mt-3">
-                      <input type="email" required placeholder="Enter your email" className="bg-transparent border-[2px] text-white font-museo border-white px-3 py-1.5 outline-none text-[14px]" />
-                      <button type="submit" className="bg-orange-400 px-2 py-2 w-[100px] text-[13px] font-museo my-3 text-black">Subscribe</button>
+                      <input type="email" required placeholder="Enter your email" className="bg-transparent border-[2px] text-white font-museo border-[#481E14] px-3 py-1.5 outline-none text-[14px]" />
+                      <button type="submit" className="bg-[#481E14] px-2 py-2 w-[100px] text-[13px] font-museo my-3 text-white">Subscribe</button>
                     </form>
                   </div>
               </div>
