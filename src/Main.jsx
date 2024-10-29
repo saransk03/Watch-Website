@@ -1,7 +1,12 @@
 import ReactDOM from "react-dom/client";
 import "./index.css";
 import Navbar from "./components/Navbar/Navbar";
-import { createBrowserRouter, Outlet, Route, RouterProvider } from "react-router-dom";
+import {
+  createBrowserRouter,
+  Outlet,
+  Route,
+  RouterProvider,
+} from "react-router-dom";
 import Footer from "./components/Footer/Footer";
 import Errorpage from "./components/Errorpage/Errorpage";
 import Body from "./pages/Body";
@@ -10,15 +15,16 @@ import Contact from "./components/Contact/Contact";
 import About from "./components/About/About";
 import Cart from "./components/Cart/Cart";
 import ProductDetail from "./components/ProductDetail/ProductDetail";
+import ThemeProvider from "./Contexts/ThemeContext";
 
 const AppLayout = () => {
   return (
     <>
-
+      <ThemeProvider>
         <Navbar />
         <Outlet />
         <Footer />
-
+      </ThemeProvider>
     </>
   );
 };
@@ -34,7 +40,7 @@ const Router = createBrowserRouter([
       },
       {
         path: "/about-us",
-        element: <About/>
+        element: <About />,
       },
       {
         path: "/products",
@@ -42,19 +48,19 @@ const Router = createBrowserRouter([
       },
       {
         path: "/contact-us",
-        element: <Contact/>,
+        element: <Contact />,
       },
       {
         path: "/product-detail",
-        element: <ProductDetail/>,
+        element: <ProductDetail />,
       },
       {
         path: "/cart",
-        element: <Cart/>,
-      }
+        element: <Cart />,
+      },
     ],
     errorElement: <Errorpage />,
-  }
+  },
 ]);
 
 const root = ReactDOM.createRoot(document.getElementById("root"));

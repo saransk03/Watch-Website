@@ -1,14 +1,17 @@
 
 import { GiRoundStar } from "react-icons/gi";
 import { Link } from "react-router-dom";
+import { ThemeContext } from "../../Contexts/ThemeContext";
+import { useContext } from "react";
 
 const ProductCard = ({product}) => {
+  const {darkMode} = useContext(ThemeContext)
 
   return (
     <>
       <div className="bg-transparent border-[2px] rounded-md py-3 px-3 w-[180px] md:w-[250px] relative hover:scale-105 hover:shadow-2xl shadow-black shad transition-all duration-300">
         <img src={product.image} alt="" className="rounded-md " />
-        <h3 className="font-museo text-start font-[600] text-[15px] mt-1">
+        <h3 className={`font-museo text-start font-[600] text-[15px] mt-1 ${darkMode? 'text-white': 'text-black'}`}>
           {product.model}, {product.color}
         </h3>
         <p className="text-start text-[10px] font-negita capitalize font-[800] text-gray-500 tracking-widest ">
@@ -18,10 +21,10 @@ const ProductCard = ({product}) => {
           {product.gender}
         </p>
         <div className="flex justify-between items-center mt-1">
-          <p className="font-[600] font-museo tracking-tight text-[13px] ">
+          <p className={`font-[600] font-museo tracking-tight text-[13px] ${darkMode? 'text-white': 'text-black'}`}>
             &#8377; {product.price}
           </p>
-          <p className="flex items-center gap-1 font-[600] font-museo tracking-tight text-[13px]">
+          <p className={`flex items-center gap-1 font-[600] font-museo tracking-tight text-[13px] ${darkMode? 'text-white': 'text-black'}`}>
             <GiRoundStar className="text-[11px] " /> {product.rating}
           </p>
         </div>
