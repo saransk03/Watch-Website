@@ -51,7 +51,7 @@ const Router = createBrowserRouter([
         element: <Contact />,
       },
       {
-        path: "/product-detail",
+        path: "/product-detail/:id",
         element: <ProductDetail />,
       },
       {

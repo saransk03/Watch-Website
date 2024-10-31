@@ -9,7 +9,7 @@ const ProductCard = ({product}) => {
 
   return (
     <>
-      <div className="bg-transparent border-[2px] rounded-md py-3 px-3 w-[180px] md:w-[250px] relative hover:scale-105 hover:shadow-2xl shadow-black shad transition-all duration-300">
+      <div className={`bg-transparent border-[2px] rounded-md py-3 px-3 w-[180px] md:w-[250px] relative hover:scale-105 hover:shadow-2xl ${darkMode? 'shadow-white' : 'shadow-black'} transition-all duration-300`}>
         <img src={product.image} alt="" className="rounded-md " />
         <h3 className={`font-museo text-start font-[600] text-[15px] mt-1 ${darkMode? 'text-white': 'text-black'}`}>
           {product.model}, {product.color}
@@ -29,7 +29,7 @@ const ProductCard = ({product}) => {
           </p>
         </div>
         <Link
-          to={"/product-detail"}
+          to={`/product-detail/${product.id}`}
           className=" flex justify-center items-center"
         >
           <button className="bg-[#9B3922] mt-2 font-museo font-[500] text-white rounded-md w-[100%] py-2 text-[12px]">

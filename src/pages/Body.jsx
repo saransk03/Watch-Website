@@ -9,7 +9,7 @@ const Body = () => {
   const { darkMode } = useContext(ThemeContext);
   return (
     <>
-      <div className={`${darkMode ? "bg-black" : "bg-white"}`}>
+      <div className={`${darkMode ? "bg-black" : "bg-white"} transition-all duration-300`}>
         <Hero />
         <Ads />
         <FeaturedCollection />
