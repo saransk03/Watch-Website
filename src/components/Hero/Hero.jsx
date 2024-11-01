@@ -6,7 +6,7 @@ const Hero = () => {
   const { darkMode } = useContext(ThemeContext);
   return (
     <>
-      <div className="container mx-auto py-5">
+      <div className="container mx-auto py-2">
         <div className={`w-[80%] md:w-[90%] video-back h-[450px] mb-[20px] overflow-hidden rounded-[20px] relative mx-auto grid grid-cols-1 ${darkMode? 'shadow-sm shadow-[#a93c24]':''}`}>
           <video autoPlay loop muted playsInline>
             <source

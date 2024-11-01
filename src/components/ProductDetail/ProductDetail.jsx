@@ -40,7 +40,7 @@ const ProductDetail = () => {
         thumbnailWidth={370}
         thumbnailHeight={370}
       />
-    )
+    );
   } else {
     return (
       <>
@@ -191,10 +191,12 @@ const ProductDetail = () => {
                   {data.description}
                 </p>
                 <p className="text-gray-500 font-museo dark:text-gray-400">
-                  Two Thunderbolt USB 4 ports and up to two USB 3 ports.
-                  Ultrafast Wi-Fi 6 and Bluetooth 5.0 wireless. Color matched
-                  Magic Mouse with Magic Keyboard or Magic Keyboard with Touch
-                  ID.
+                  A premium watch combines luxury, craftsmanship, and timeless
+                  design, often made with high-quality materials and intricate
+                  mechanisms. It serves not only as a timepiece but as a status
+                  symbol, reflecting style and sophistication. These watches are
+                  known for their durability, precision, and the artistry that
+                  goes into each detail.
                 </p>
               </div>
             </div>

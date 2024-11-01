@@ -10,7 +10,7 @@ function Navbar() {
 
   return (
     <>
-      <div className={`2xl:container mx-auto sticky top-0 z-20 ${darkMode? 'bg-black':'bg-white'} transition-all duration-300`}>
+      <div className={`2xl:container mx-auto sticky top-0 z-40 ${darkMode? 'bg-black':'bg-white'} transition-all duration-300`}>
         <nav className="w-[90%] mx-auto grid grid-cols-1 py-2">
           <div className="flex justify-around items-center">             
               <div className="flex justify-center items-center flex-col my-auto">

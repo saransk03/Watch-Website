@@ -48,8 +48,8 @@ const Footer = () => {
                   type="submit"
                   className={`${
                     darkMode
-                      ? "bg-[#F2613F] hover:bg-[#481E14]"
-                      : "bg-[#481E14] hover:bg-[#F2613F]"
+                      ? "bg-[#481E14] hover:bg-[#F2613F]" 
+                      : "bg-[#F2613F] hover:bg-[#481E14]"
                   } transition-all duration-300 px-2 py-2 w-[100px] text-[13px] font-museo my-3 text-white`}
                 >
                   Subscribe

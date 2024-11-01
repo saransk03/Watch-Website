@@ -4,6 +4,9 @@ import Ads2 from "../components/Ads/Ads2";
 import FeaturedCollection from "../components/FeaturedCollection/FeaturedCollection";
 import Hero from "../components/Hero/Hero";
 import { ThemeContext } from "../Contexts/ThemeContext";
+import Service from "../components/Services/Service";
+import Review from "../components/Review/Review";
+import Brand from "../components/Brand/Brand";
 
 const Body = () => {
   const { darkMode } = useContext(ThemeContext);
@@ -14,6 +17,9 @@ const Body = () => {
         <Ads />
         <FeaturedCollection />
         <Ads2 />
+        <Brand/>
+        <Review/>
+        <Service/>
       </div>
     </>
   );

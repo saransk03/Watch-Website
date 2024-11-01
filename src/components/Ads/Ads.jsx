@@ -3,7 +3,7 @@ import { assests } from "../../assests/assests"
 const Ads = () => {
   return (
     <>
-        <div className="2xl:container mx-auto py-4">
+        <div className="2xl:container mx-auto py-2">
             <div className="w-[80%] mx-auto grid grid-cols-1">
                 <div className="flex justify-between items-center gap-4">
                     <div className="ads-1 w-[600px] h-[300px] rounded-[20px] flex flex-col justify-center items-start px-[3rem]">
