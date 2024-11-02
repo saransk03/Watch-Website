@@ -25,7 +25,7 @@ const UseFetchData = () => {
       }
     }
 
-    return { isLoading, data,setData };
+    return { isLoading, data };
 
 }
 

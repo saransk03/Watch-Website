@@ -15,6 +15,7 @@ import seiko from './seiko.png'
 import tissot from './tissot.png'
 import breitling from './breitling.png'
 import ads0 from './ads0.png'
+import ads3 from './ads3.jpg'
 
 
 
@@ -36,5 +37,6 @@ export const assests = {
         seiko,
         tissot,
         breitling,
-        ads0
+        ads0,
+        ads3
 }

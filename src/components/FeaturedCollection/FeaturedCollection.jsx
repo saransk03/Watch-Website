@@ -2,24 +2,30 @@ import React, { useContext } from "react";
 import UseFetchData from "../../Hooks/UseFetchData";
 import { ThemeContext } from "../../Contexts/ThemeContext";
 import { GiRoundStar } from "react-icons/gi";
+import { ShimmerSimpleGallery } from "react-shimmer-effects";
 import { Link } from "react-router-dom";
 
 const FeaturedCollection = () => {
     const { isLoading, data } = UseFetchData();
     const {darkMode} = useContext(ThemeContext)
 
-    if (isLoading) return <p>Loading...</p>;
-
-    return (
+    if (isLoading){
+      return(
+        <div className="w-[90%] mx-auto grid grid-cols-1 py-3">
+          <ShimmerSimpleGallery card imageHeight={300} caption />
+        </div>
+      )
+    }else{
+      return (
         <div className="2xl:container mx-auto py-4">
             <div className="w-[80%] mx-auto grid grid-cols-1">
                 <div className="flex justify-center items-center">
-                    <h1 className={`${darkMode? 'text-white':'text-black'} font-negita font-bold text-[30px]`}>Featured Collection</h1>
+                    <h1 className={`${darkMode? 'text-white':'text-black'} font-negita font-bold text-[20px] md:text-[30px]`}>Featured Collection</h1>
                 </div>
             </div>
-            <div className="w-[80%] mx-auto grid grid-cols-1 py-4">
-                <div className="flex flex-grow justify-evenly items-center gap-5">
-                    {data.slice(10, 15).map((product) => (
+            <div className="w-[90%] md:w-[80%] mx-auto grid grid-cols-1 py-4">
+                <div className="flex flex-wrap md: flex-grow justify-evenly items-center gap-2 md:gap-5">
+                    {data.slice(3, 7).map((product) => (
                         <div className={`bg-transparent border-[2px] rounded-md py-3 px-3 w-[180px] md:w-[250px] relative hover:scale-105 hover:shadow-2xl ${darkMode? 'shadow-white' : 'shadow-black'} transition-all duration-300`}>
                         <img src={product.image} alt="" className="rounded-md " />
                         <h3 className={`font-museo text-start font-[600] text-[15px] mt-1 ${darkMode? 'text-white': 'text-black'}`}>
@@ -52,7 +58,7 @@ const FeaturedCollection = () => {
                 </div>
                 <div className="flex justify-center items-center mt-5">
                     <Link to={"/products"}>
-                      <button className="bg-[#481E14] px-4 py-2 font-museo text-white rounded-md">
+                      <button className="bg-[#481E14] px-4 py-2 text-[12px] md:text-[18px] font-bold font-museo text-white rounded-md">
                           More Products
                       </button>
                     </Link>
@@ -60,6 +66,7 @@ const FeaturedCollection = () => {
             </div>
         </div>
     );
+    }
 };
 
 export default FeaturedCollection;

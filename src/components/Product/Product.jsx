@@ -7,34 +7,18 @@ import UseFetchData from "../../Hooks/UseFetchData";
 const Product = () => {
   const { darkMode } = useContext(ThemeContext);
   const { data, isLoading } = UseFetchData();
-  console.log(data.gender)
+  const genders = ["men", "women", "unisex"]
 
   const [selectfilter, setSelectFilter] = useState([]);
-  const [filterItems, setFilterItems] = useState(data);
-  const category = ["men", "women", "unisex"];
 
-  const handleFilterButtonClick = (selectedCategory) => {
-    if (selectfilter.includes(selectedCategory)) {
-      let filters = selectfilter.filter((el) => el !== selectedCategory);
-      setSelectFilter(filters);
+  const handleFilterButtonClick = (index) => {
+        // Check if index is already selected
+    if (selectfilter.includes(index)) {
+      // If it's selected, remove it
+      setSelectFilter(selectfilter.filter(item => item !== index));
     } else {
-      setSelectFilter([...selectfilter, selectedCategory]);
-    }
-  };
-
-  useEffect(() => {
-    filterItemsFunction();
-  }, [selectfilter]);
-
-  const filterItemsFunction = () => {
-    if (selectfilter.length > 0) {
-      let tempItems = selectfilter.map((selectedCategory) => {
-        let temp = data.filter((data) => data.gender === selectedCategory);
-        return temp;
-      });
-      setFilterItems(tempItems.flat());
-    } else {
-      setFilterItems([...data]);
+      // If it's not selected, add it
+      setSelectFilter([...selectfilter, index]);
     }
   };
 
@@ -70,13 +54,13 @@ const Product = () => {
             </div>
 
             <div className="flex justify-start items-center gap-4 py-4 ml-6">
-              {category.map((category, id) => (
-                <button
-                  onClick={() => handleFilterButtonClick(category)}
+              {genders.map((category,index)=>(
+                  <button
+                  key={index}
+                  onClick={() => handleFilterButtonClick(index)}
                   className={` ${
-                    selectfilter?.includes(category) ? "active" : "bg-gray-500"
+                    selectfilter.includes(index)? "active" : "bg-gray-500"
                   } category-btn px-3 py-1 text-[12px] font-museo text-white capitalize font-normal rounded-[30px]`}
-                  key={id}
                 >
                   {category}
                 </button>

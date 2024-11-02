@@ -41,7 +41,7 @@ const Footer = () => {
                   required
                   placeholder="Enter your email"
                   className={`bg-transparent border-[2px] text-white font-museo ${
-                    darkMode ? "border-black" : "border-[#481E14]"
+                    darkMode ? "border-[#481E14]" : "border-[#F2613F]"
                   }  px-3 py-1.5 outline-none text-[14px]`}
                 />
                 <button
@@ -109,11 +109,11 @@ const Footer = () => {
               Get In Touch
             </h1>
             <div className="flex flex-col gap-5 mt-4">
-              <>
+              <Link to={"/contact-us"}>
                 <p className="text-[10px] font-museo hover:text-white text-gray-400 cursor-pointer">
                   Contact Us
                 </p>
-              </>
+              </Link>
               <>
                 <p className="text-[10px] font-museo hover:text-white text-gray-400 cursor-pointer">
                   Our Boutiques

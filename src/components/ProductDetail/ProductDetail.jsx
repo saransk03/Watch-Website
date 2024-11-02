@@ -52,7 +52,7 @@ const ProductDetail = () => {
           <div className="max-w-screen-xl md:w-[80%] px-4 mx-auto 2xl:px-0 relative">
             <Link
               to={"/products"}
-              className={`absolute top-0 left-0 ${
+              className={`absolute top-2 left-6 md:top-0 md:left-0 ${
                 darkMode ? "bg-[#F2613F]" : "bg-black"
               } px-3 py-3 w-[40px] h-[40px] rounded-[50px] hover:text-[18px] cursor-pointer transition-all duration-300 flex justify-center items-center z-10`}
             >

@@ -9,7 +9,7 @@ const About = () => {
   return (
     <>
       <div className={`2xl:container mx-auto py-5 ${darkMode? 'bg-black':'bg-white'} transition-all duration-300`}>
-        <div className="w-[70%] mx-auto grid grid-cols-1">
+        <div className="w-[90%] md:w-[70%] mx-auto grid grid-cols-1">
           <div className="flex flex-col justify-center items-center">
             <h1 className={`${darkMode?'text-white':'text-black'} font-[900] font-negita text-[30px] tracking-widest`}>
               About us
