@@ -3,12 +3,16 @@ import { Link, useParams } from "react-router-dom";
 import { FaArrowLeftLong } from "react-icons/fa6";
 import { ThemeContext } from "../../Contexts/ThemeContext";
 import { ShimmerContentBlock } from "react-shimmer-effects";
+import { CartContext } from "../../Contexts/UseCartContext";
 
 const ProductDetail = () => {
   const { darkMode } = useContext(ThemeContext);
+  const { cart, addToCart } = useContext(CartContext)
   const { id } = useParams();
   const [isLoading, setIsLoading] = useState(true); // Start with loading state as true
   const [data, setData] = useState(null); // Set initial data to null
+
+  console.log(cart)
 
   useEffect(() => {
     fetchData();
@@ -155,10 +159,8 @@ const ProductDetail = () => {
                   </div>
                 </div>
                 <div className="mt-6 sm:gap-4 sm:items-center sm:flex sm:mt-8">
-                  <Link
-                    to="/Cart"
-                    href="#"
-                    title=""
+                  <button
+                    onClick={()=>addToCart(data)}
                     className={`text-white mt-4 sm:mt-0 ${
                       darkMode
                         ? "bg-[#F2613F] hover:bg-[#481E14]"
@@ -184,7 +186,7 @@ const ProductDetail = () => {
                       />
                     </svg>
                     Add to cart
-                  </Link>
+                  </button>
                 </div>
                 <hr className="my-6 md:my-8 border-gray-200 dark:border-gray-800" />
                 <p className="mb-6 text-gray-500 font-museo dark:text-gray-400">

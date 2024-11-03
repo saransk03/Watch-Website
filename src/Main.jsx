@@ -16,15 +16,18 @@ import About from "./components/About/About";
 import Cart from "./components/Cart/Cart";
 import ProductDetail from "./components/ProductDetail/ProductDetail";
 import ThemeProvider from "./Contexts/ThemeContext";
+import CartProvider from "./Contexts/UseCartContext";
 
 const AppLayout = () => {
   return (
     <>
-      <ThemeProvider>
-        <Navbar />
-        <Outlet />
-        <Footer />
-      </ThemeProvider>
+      <CartProvider>
+        <ThemeProvider>
+          <Navbar />
+          <Outlet />
+          <Footer />
+        </ThemeProvider>
+      </CartProvider>
     </>
   );
 };
