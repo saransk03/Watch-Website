@@ -99,12 +99,15 @@ const Review = () => {
   return (
     <>
       <div className="2xl:container mx-auto py-5 my-2 ">
-        <div className={`w-[90%] lg:w-[80%] mx-auto grid grid-cols-1 ${darkMode? 'bg-[#F2613F]':'bg-[#9B3922]'}  py-10 rounded-2xl gap-4`}>
+        <div className={`w-[90%] lg:w-[80%] mx-auto grid grid-cols-1 ${darkMode? 'bg-[#F2613F]':'bg-[#9B3922]'}  py-10 rounded-2xl gap-4`} data-aos="flip-down"
+              data-aos-duration="1000">
           <div className="flex flex-col justify-center items-center">
             <h1
               className={`${
                 darkMode ? "text-black" : "text-white"
               } font-negita font-bold text-[20px] md:text-[30px] py-2`}
+              data-aos="zoom-out-down"
+              data-aos-duration="1100"
             >
               Reviews
             </h1>
@@ -118,6 +121,8 @@ const Review = () => {
                     className={`flex flex-col justify-center items-center border-2 ${
                       darkMode ? " border-black" : "border-white"
                     } px-4 py-1 rounded-md shadow-md w-[280px] h-[180px] md:w-[200px] md:h-[180px] lg:w-[250px] lg:h-[280px] mx-3 md:mx-2`}
+                    data-aos="zoom-out-down"
+              data-aos-duration="1000"
                   >
                     <img
                       src={review.image}

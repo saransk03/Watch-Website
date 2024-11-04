@@ -5,7 +5,6 @@ import { Link } from "react-router-dom"
 
 const ResponseNav = ({toggleMenu}) => {
     const {darkMode} = useContext(ThemeContext)
-    console.log(toggleMenu)
   return (
     <>
         <div className="2xl:container mx-auto">

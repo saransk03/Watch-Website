@@ -1,0 +1,224 @@
+{
+    "products": [
+      {
+        "id": 1,
+        "image": "https://i.pinimg.com/564x/70/77/dc/7077dcb61be5c54bc231028744389085.jpg",
+        "brand": "Rolex",
+        "model": "Submariner",
+        "price": 8500,
+        "description": "A timeless classic, the Rolex Submariner offers precision and durability. Perfect for divers and watch enthusiasts.",
+        "rating": 4.8,
+        "gender": "Unisex",
+        "color": "Black"
+      },
+      {
+        "id": 2,
+        "image": "https://i.pinimg.com/564x/2d/9d/9a/2d9d9a6bba1d3673808caccd484def6b.jpg",
+        "brand": "Omega",
+        "model": "Seamaster",
+        "price": 5000,
+        "description": "The Omega Seamaster combines elegance with performance. Ideal for any occasion, with a strong build and sleek look.",
+        "rating": 4.7,
+        "gender": "Men",
+        "color": "Blue"
+      },
+      {
+        "id": 3,
+        "image": "https://i.pinimg.com/564x/fc/96/a1/fc96a192c8d6ae755578a5e732d233bd.jpg",
+        "brand": "Tag Heuer",
+        "model": "Carrera",
+        "price": 3500,
+        "description": "Known for its sophisticated design, the Tag Heuer Carrera suits the modern professional. A must-have for watch lovers.",
+        "rating": 4.5,
+        "gender": "Men",
+        "color": "Silver"
+      },
+      {
+        "id": 4,
+        "image": "https://i.pinimg.com/564x/ff/e6/d2/ffe6d2aae1130ca0f5f5fe4300c082d2.jpg",
+        "brand": "Casio",
+        "model": "G-Shock",
+        "price": 1100,
+        "description": "Durable and affordable, the Casio G-Shock is a great choice for sports and outdoor activities. Shock-resistant and waterproof.",
+        "rating": 4.3,
+        "gender": "Unisex",
+        "color": "Red"
+      },
+      {
+        "id": 5,
+        "image": "https://i.pinimg.com/564x/f1/76/50/f176506d2c49f19d4c61a18c5d6e1de2.jpg",
+        "brand": "Seiko",
+        "model": "Prospex",
+        "price": 1700,
+        "description": "Built for adventure, the Seiko Prospex is reliable and versatile, featuring a rugged design and high-quality components.",
+        "rating": 4.6,
+        "gender": "Men",
+        "color": "Green"
+      },
+      {
+        "id": 6,
+        "image": "https://i.pinimg.com/564x/09/cc/b8/09ccb8c9941ed691ae310e117b2cd953.jpg",
+        "brand": "Citizen",
+        "model": "Eco-Drive",
+        "price": 1200,
+        "description": "Eco-friendly and stylish, the Citizen Eco-Drive harnesses solar power to keep you on time without needing a battery.",
+        "rating": 4.4,
+        "gender": "Women",
+        "color": "Gold"
+      },
+      {
+        "id": 7,
+        "image": "https://i.pinimg.com/564x/35/5f/ff/355fff3fc1b1b0d5f7996fc7e80fad43.jpg",
+        "brand": "Fossil",
+        "model": "Gen 5",
+        "price": 2300,
+        "description": "Smart and sleek, the Fossil Gen 5 smart watch pairs with your smartphone, providing notifications and fitness tracking.",
+        "rating": 4.2,
+        "gender": "Unisex",
+        "color": "Black"
+      },
+      {
+        "id": 8,
+        "image": "https://i.pinimg.com/564x/42/1e/5b/421e5be89cacd9768a292e75b970a2d4.jpg",
+        "brand": "Michael Kors",
+        "model": "Lexington",
+        "price": 3250,
+        "description": "A luxurious touch with Michael Kors Lexington, combining fashion and function in a beautiful gold finish.",
+        "rating": 4.3,
+        "gender": "Women",
+        "color": "Gold"
+      },
+      {
+        "id": 9,
+        "image": "https://i.pinimg.com/564x/08/4e/8f/084e8ff0dacc8de3aca5a6cb66f45ae1.jpg",
+        "brand": "Tissot",
+        "model": "PRX",
+        "price": 2750,
+        "description": "The Tissot PRX features a minimalist design with maximum quality, a great addition for the modern wardrobe.",
+        "rating": 4.5,
+        "gender": "Men",
+        "color": "Silver"
+      },
+      {
+        "id": 10,
+        "image": "https://i.pinimg.com/564x/fe/7c/2d/fe7c2d7c52b85475d72eceab41385961.jpg",
+        "brand": "Timex",
+        "model": "Weekender",
+        "price": 6600,
+        "description": "An affordable and stylish choice, the Timex Weekender is versatile and perfect for casual wear.",
+        "rating": 4.1,
+        "gender": "Unisex",
+        "color": "Blue"
+      },
+      {
+        "id": 11,
+        "image": "https://i.pinimg.com/564x/5c/84/f7/5c84f796ec1eb77d9ecb0e4b0e436302.jpg",
+        "brand": "Cartier",
+        "model": "Tank",
+        "price": 5500,
+        "description": "The Cartier Tank's design is iconic, capturing elegance and timeless beauty in a sophisticated package.",
+        "rating": 4.9,
+        "gender": "Women",
+        "color": "Silver"
+      },
+      {
+        "id": 12,
+        "image": "https://i.pinimg.com/564x/5c/a9/3f/5ca93fd82d10824f2351930cead624f4.jpg",
+        "brand": "Hublot",
+        "model": "Big Bang",
+        "price": 12000,
+        "description": "The Hublot Big Bang offers bold aesthetics and precision, a luxury choice for high-end watch enthusiasts.",
+        "rating": 4.8,
+        "gender": "Men",
+        "color": "Black"
+      },
+      {
+        "id": 13,
+        "image": "https://i.pinimg.com/564x/fc/cb/e9/fccbe9a1c63a36bafe2ed34551aea4a0.jpg",
+        "brand": "Swatch",
+        "model": "Originals",
+        "price": 1900,
+        "description": "Swatch Originals offers vibrant colors and a playful design, perfect for adding some fun to your collection.",
+        "rating": 4.0,
+        "gender": "Unisex",
+        "color": "Pink"
+      },
+      {
+        "id": 14,
+        "image": "https://i.pinimg.com/564x/78/5a/2f/785a2fd1b1d2a41c2ff9bbd401c4f07a.jpg",
+        "brand": "Breitling",
+        "model": "Navitimer",
+        "price": 7000,
+        "description": "A staple for pilots, the Breitling Navitimer combines history with precision, ideal for aviation enthusiasts.",
+        "rating": 4.7,
+        "gender": "Men",
+        "color": "Blue"
+      },
+      {
+        "id": 15,
+        "image": "https://i.pinimg.com/564x/af/62/bb/af62bbd4ecd1831ac7a0bccea47a5953.jpg",
+        "brand": "Patek Philippe",
+        "model": "Nautilus",
+        "price": 3000,
+        "description": "An exclusive choice, the Patek Philippe Nautilus combines luxury with a highly sought-after design.",
+        "rating": 4.9,
+        "gender": "Unisex",
+        "color": "Gold"
+      },
+      {
+        "id": 16,
+        "image": "https://i.pinimg.com/564x/53/3c/b3/533cb3c68ea4a098cfa88dfad2b5f2e0.jpg",
+        "brand": "Movado",
+        "model": "Bold",
+        "price": 1500,
+        "description": "The Movado Bold is sleek and modern, with a unique design that appeals to the fashion-conscious.",
+        "rating": 4.3,
+        "gender": "Women",
+        "color": "Black"
+      },
+      {
+        "id": 17,
+        "image": "https://i.pinimg.com/564x/78/c9/7e/78c97e02008e4b9eaa8b1f1b039f7c74.jpg",
+        "brand": "Longines",
+        "model": "Master Collection",
+        "price": 1800,
+        "description": "Elegant and refined, the Longines Master Collection is perfect for those seeking a touch of class.",
+        "rating": 4.6,
+        "gender": "Men",
+        "color": "Brown"
+      },
+      {
+        "id": 18,
+        "image": "https://i.pinimg.com/564x/55/00/ec/5500ec07089e13884e75210efc6a21da.jpg",
+        "brand": "Hamilton",
+        "model": "Khaki Field",
+        "price": 1600,
+        "description": "Inspired by military watches, the Hamilton Khaki Field offers durability and style for adventure seekers.",
+        "rating": 4.4,
+        "gender": "Men",
+        "color": "Green"
+      },
+      {
+        "id": 19,
+        "image": "https://i.pinimg.com/564x/ff/b2/d6/ffb2d684f93a77b1a50447b3612c63dc.jpg",
+        "brand": "Rado",
+        "model": "Centrix",
+        "price": 1000,
+        "description": "With its sleek design and ceramic build, the Rado Centrix is both elegant and comfortable on the wrist.",
+        "rating": 4.5,
+        "gender": "Women",
+        "color": "Silver"
+      },
+      {
+        "id": 20,
+        "image": "https://i.pinimg.com/564x/f5/f1/2a/f5f12a0677fec995ee5f4ec4aadc7ddd.jpg",
+        "brand": "Oris",
+        "model": "Aquis Date",
+        "price": 1500,
+        "description": "The Oris Aquis Date is a diver’s watch with style, offering water resistance and precision for underwater exploration.",
+        "rating": 4.6,
+        "gender": "Unisex",
+        "color": "Blue"
+      }
+    ]
+  }

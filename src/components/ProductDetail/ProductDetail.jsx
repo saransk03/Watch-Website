@@ -7,12 +7,10 @@ import { CartContext } from "../../Contexts/UseCartContext";
 
 const ProductDetail = () => {
   const { darkMode } = useContext(ThemeContext);
-  const { cart, addToCart } = useContext(CartContext)
+  const { cart, addToCart } = useContext(CartContext);
   const { id } = useParams();
   const [isLoading, setIsLoading] = useState(true); // Start with loading state as true
-  const [data, setData] = useState(null); // Set initial data to null
-
-  console.log(cart)
+  const [data, setData] = useState([]); // Set initial data to null
 
   useEffect(() => {
     fetchData();
@@ -21,12 +19,11 @@ const ProductDetail = () => {
   const fetchData = async () => {
     try {
       setIsLoading(true);
-      const res = await fetch(
-        "https://run.mocky.io/v3/fd90c45f-ea41-404f-92a7-50e20b20d7b9"
-      );
+      const res = await fetch("http://localhost:3000/products");
       const result = await res.json();
       const productId = parseInt(id);
-      const product = result.products.find((item) => item.id === productId);
+      const product = result.find((item) => item.id == productId);
+      console.log(result)
       setData(product);
     } catch (err) {
       console.error("Error fetching data:", err);
@@ -59,6 +56,8 @@ const ProductDetail = () => {
               className={`absolute top-2 left-6 md:top-0 md:left-0 ${
                 darkMode ? "bg-[#F2613F]" : "bg-black"
               } px-3 py-3 w-[40px] h-[40px] rounded-[50px] hover:text-[18px] cursor-pointer transition-all duration-300 flex justify-center items-center z-10`}
+              data-aos="fade-right"
+              data-aos-duration="1500"
             >
               <FaArrowLeftLong
                 className={`${
@@ -67,7 +66,8 @@ const ProductDetail = () => {
               />
             </Link>
             <div className="lg:grid lg:grid-cols-2 lg:gap-8 xl:gap-16 relative">
-              <div className="shrink-0 max-w-md lg:max-w-lg mx-auto flex justify-center items-center">
+              <div className="shrink-0 max-w-md lg:max-w-lg mx-auto flex justify-center items-center" data-aos="fade-right"
+              data-aos-duration="1500">
                 <img className="w-[400px] rounded-lg" src={data.image} alt="" />
               </div>
               <div className="mt-6 sm:mt-8 lg:mt-0">
@@ -75,10 +75,13 @@ const ProductDetail = () => {
                   className={`md:text-[35px] font-semibold sm:text-2xl font-keania tracking-wide ${
                     darkMode ? "text-white" : "text-black"
                   }`}
+                  data-aos="fade-left"
+              data-aos-duration="1500"
                 >
                   {data.model}, {data.color}, {data.gender}
                 </h1>
-                <p className="text-[15px] font-bold text-gray-500 font-negita tracking-widest mt-2">
+                <p className="text-[15px] font-bold text-gray-500 font-negita tracking-widest mt-2" data-aos="fade-left"
+              data-aos-duration="1500">
                   {data.brand}
                 </p>
                 <div className="mt-4 sm:items-center sm:gap-4 sm:flex">
@@ -86,11 +89,14 @@ const ProductDetail = () => {
                     className={`text-2xl font-extrabold font-museo ${
                       darkMode ? "text-white" : "text-gray-900"
                     }  sm:text-3xl`}
+                    data-aos="fade-left"
+              data-aos-duration="1500"
                   >
                     &#8377; {data.price}
                   </p>
                   <div className="flex items-center gap-2 mt-1 sm:mt-0">
-                    <div className="flex items-center gap-1">
+                    <div className="flex items-center gap-1" data-aos="fade-left"
+              data-aos-duration="1500">
                       <svg
                         className="w-4 h-4 text-yellow-300"
                         aria-hidden="true"
@@ -147,12 +153,15 @@ const ProductDetail = () => {
                         <path d="M13.849 4.22c-.684-1.626-3.014-1.626-3.698 0L8.397 8.387l-4.552.361c-1.775.14-2.495 2.331-1.142 3.477l3.468 2.937-1.06 4.392c-.413 1.713 1.472 3.067 2.992 2.149L12 19.35l3.897 2.354c1.52.918 3.405-.436 2.992-2.15l-1.06-4.39 3.468-2.938c1.353-1.146.633-3.336-1.142-3.477l-4.552-.36-1.754-4.17Z" />
                       </svg>
                     </div>
-                    <p className="text-sm font-medium font-museo leading-none text-gray-500 dark:text-gray-400">
+                    <p className="text-sm font-medium font-museo leading-none text-gray-500 dark:text-gray-400" data-aos="fade-left"
+              data-aos-duration="1500">
                       ({data.rating})
                     </p>
                     <a
                       href="#"
                       className="text-[12px] font-museo font-medium leading-none text-gray-600 underline hover:no-underline"
+                      data-aos="fade-left"
+              data-aos-duration="1500"
                     >
                       345 Reviews
                     </a>
@@ -160,13 +169,15 @@ const ProductDetail = () => {
                 </div>
                 <div className="mt-6 sm:gap-4 sm:items-center sm:flex sm:mt-8">
                   <button
-                    onClick={()=>addToCart(data)}
+                    onClick={() => addToCart(data)}
                     className={`text-white mt-4 sm:mt-0 ${
                       darkMode
                         ? "bg-[#F2613F] hover:bg-[#481E14]"
                         : "bg-[#481E14] hover:bg-[#F2613F]"
                     } transition-all duration-300  font-medium font-museo rounded-lg text-sm px-5 py-2.5 flex items-center justify-center`}
                     role="button"
+                    data-aos="fade-left"
+              data-aos-duration="1500"
                   >
                     <svg
                       className="w-5 h-5 -ms-2 me-2"
@@ -188,11 +199,14 @@ const ProductDetail = () => {
                     Add to cart
                   </button>
                 </div>
-                <hr className="my-6 md:my-8 border-gray-200 dark:border-gray-800" />
-                <p className="mb-6 text-gray-500 font-museo dark:text-gray-400">
+                <hr className="my-6 md:my-8 border-gray-200 dark:border-gray-800" data-aos="fade-left"
+              data-aos-duration="1500"/>
+                <p className="mb-6 text-gray-500 font-museo dark:text-gray-400" data-aos="fade-left"
+              data-aos-duration="1500">
                   {data.description}
                 </p>
-                <p className="text-gray-500 font-museo dark:text-gray-400">
+                <p className="text-gray-500 font-museo dark:text-gray-400" data-aos="fade-left"
+              data-aos-duration="1500">
                   A premium watch combines luxury, craftsmanship, and timeless
                   design, often made with high-quality materials and intricate
                   mechanisms. It serves not only as a timepiece but as a status

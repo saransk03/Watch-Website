@@ -9,7 +9,10 @@ const ProductCard = ({product}) => {
 
   return (
     <>
-      <div className={`bg-transparent border-[2px] rounded-md py-3 px-3 w-[180px] md:w-[250px] relative hover:scale-105 hover:shadow-2xl ${darkMode? 'shadow-white' : 'shadow-black'} transition-all duration-300`}>
+      <div className={`bg-transparent border-[2px] rounded-md py-3 px-3 w-[180px] md:w-[250px] relative hover:scale-105 hover:shadow-2xl ${darkMode? 'shadow-white' : 'shadow-black'} transition-all duration-300`}
+       data-aos="flip-right"
+       data-aos-duration="1000"
+       >
         <img src={product.image} alt="" className="rounded-md " />
         <h3 className={`font-museo text-start font-[600] text-[15px] mt-1 ${darkMode? 'text-white': 'text-black'}`}>
           {product.model}, {product.color}

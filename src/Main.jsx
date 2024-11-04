@@ -6,6 +6,7 @@ import {
   Outlet,
   Route,
   RouterProvider,
+  ScrollRestoration,
 } from "react-router-dom";
 import Footer from "./components/Footer/Footer";
 import Errorpage from "./components/Errorpage/Errorpage";
@@ -17,13 +18,24 @@ import Cart from "./components/Cart/Cart";
 import ProductDetail from "./components/ProductDetail/ProductDetail";
 import ThemeProvider from "./Contexts/ThemeContext";
 import CartProvider from "./Contexts/UseCartContext";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import { useEffect } from "react";
 
 const AppLayout = () => {
+
+  useEffect(() => {
+    AOS.init({
+      duration: 1000, 
+    })
+  },[]);
+
   return (
     <>
       <CartProvider>
         <ThemeProvider>
           <Navbar />
+          <ScrollRestoration />
           <Outlet />
           <Footer />
         </ThemeProvider>

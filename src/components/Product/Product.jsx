@@ -7,6 +7,8 @@ import UseFetchData from "../../Hooks/UseFetchData";
 const Product = () => {
   const { darkMode } = useContext(ThemeContext);
   const { data, isLoading } = UseFetchData();
+  
+
 
   // const category = ["Men", "Women", "Unisex"];
 
@@ -72,6 +74,8 @@ const Product = () => {
                 className={`${
                   darkMode ? "text-white" : "text-black"
                 } font-[900] font-negita text-[30px] tracking-widest`}
+                 data-aos="zoom-out-down"
+              data-aos-duration="1000"
               >
                 Our Products
               </h1>

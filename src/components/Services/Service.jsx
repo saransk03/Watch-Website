@@ -18,6 +18,8 @@ const Service = () => {
             className={`flex justify-center items-center border-2 ${
               darkMode ? "border-white" : "border-black"
             } px-3 py-5 rounded-xl gap-3`}
+             data-aos="fade-up"
+              data-aos-duration="1000"
           >
             <RiCustomerService2Fill className={`text-[60px] ${darkMode? 'text-white':'text-black'}`}/>
             <div className="flex flex-col justify-center items-center">
@@ -30,6 +32,8 @@ const Service = () => {
             className={`flex justify-center items-center border-2 ${
               darkMode ? "border-white" : "border-black"
             } px-3 py-5 rounded-xl gap-3`}
+            data-aos="fade-up"
+              data-aos-duration="1100"
           >
             <RiSecurePaymentLine className={`text-[60px] ${darkMode? 'text-white':'text-black'}`}/>
             <div className="flex flex-col justify-center items-center">
@@ -42,6 +46,8 @@ const Service = () => {
             className={`flex justify-center items-center border-2 ${
               darkMode ? "border-white" : "border-black"
             } px-3 py-5 rounded-xl gap-3`}
+            data-aos="fade-up"
+              data-aos-duration="1200"
           >
             <RiRefund2Fill className={`text-[60px] ${darkMode? 'text-white':'text-black'}`}/>
             <div className="flex flex-col justify-center items-center">
@@ -54,6 +60,8 @@ const Service = () => {
             className={`flex justify-center items-center border-2 ${
               darkMode ? "border-white" : "border-black"
             } px-3 py-5 rounded-xl gap-3`}
+            data-aos="fade-up"
+              data-aos-duration="1000"
           >
             <FaShippingFast className={`text-[60px] ${darkMode? 'text-white':'text-black'}`}/>
             <div className="flex flex-col justify-center items-center">
