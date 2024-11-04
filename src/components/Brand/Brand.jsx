@@ -6,7 +6,7 @@ const Brand = () => {
   const {darkMode} = useContext(ThemeContext)
   return (
     <>
-      <div className="2xl:container mx-auto py-3">
+      <div className="2xl:container mx-auto py-6">
         <div className="w-[90%] mx-auto grid grid-cols-1 gap-4">
           <div className="flex justify-center items-center py-4">
             <h1 className={`${darkMode? 'text-white':'text-black'} font-negita font-bold text-[30px]`}>Brand We Love</h1>

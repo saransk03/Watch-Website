@@ -1,11 +1,13 @@
 import { useContext, useState } from "react";
+import { assests } from "../../assests/assests";
 import { ThemeContext } from "../../Contexts/ThemeContext";
 import { Link } from "react-router-dom";
 import { CartContext } from "../../Contexts/UseCartContext";
 
 const Cart = () => {
   const { darkMode } = useContext(ThemeContext);
-  const { cart, addToCart, removeFromCart, updateCartItemQuantity } = useContext(CartContext);
+  const { cart, addToCart, removeFromCart, updateCartItemQuantity } =
+    useContext(CartContext);
 
   return (
     <>
@@ -22,12 +24,13 @@ const Cart = () => {
           >
             Shopping Cart
           </h2>
-          <div className="mt-6 sm:mt-8 md:gap-6 lg:flex lg:items-start xl:gap-8">
-            <div className="mx-auto w-full flex-none lg:max-w-2xl xl:max-w-4xl">
-              <div className="space-y-6">
-                {cart.length !== 0 ? (
-                  cart.map((items) => {
-                    return(
+
+          {cart.length !== 0 ? (
+            cart.map((items) => {
+              return (
+                <div className="mt-6 sm:mt-8 md:gap-6 lg:flex lg:items-start xl:gap-8">
+                  <div className="mx-auto w-full flex-none lg:max-w-2xl xl:max-w-4xl">
+                    <div className="space-y-6">
                       <div
                         className={`rounded-[15px] border-2 p-4 shadow-sm ${
                           darkMode ? "border-[#F2613F]" : "border-black"
@@ -51,7 +54,9 @@ const Cart = () => {
                               }  rounded-[30px] px-3 py-1 gap-3`}
                             >
                               <button
-                                onClick={()=> updateCartItemQuantity(items.id, -1)}
+                                onClick={() =>
+                                  updateCartItemQuantity(items.id, -1)
+                                }
                                 type="button"
                                 id="decrement-button"
                                 data-input-counter-decrement="counter-input"
@@ -86,7 +91,9 @@ const Cart = () => {
                               </p>
                               <button
                                 type="button"
-                                onClick={()=> updateCartItemQuantity(items.id, 1)}
+                                onClick={() =>
+                                  updateCartItemQuantity(items.id, 1)
+                                }
                                 id="increment-button"
                                 data-input-counter-increment="counter-input"
                                 className="inline-flex h-7 w-7 shrink-0 items-center justify-center outline-none text-white"
@@ -126,11 +133,12 @@ const Cart = () => {
                                 darkMode ? "text-white" : "text-black"
                               } font-museo`}
                             >
-                              {items.brand} , {items.model} ({items.color}) {items.gender}
+                              {items.brand} , {items.model} ({items.color}){" "}
+                              {items.gender}
                             </p>
                             <div className="flex items-center">
                               <button
-                                onClick={()=> removeFromCart(items.id)}
+                                onClick={() => removeFromCart(items.id)}
                                 type="button"
                                 className="inline-flex items-center text-[12px] font-medium text-white bg-red-600 px-3 py-1.5 rounded-md font-museo"
                               >
@@ -157,182 +165,205 @@ const Cart = () => {
                           </div>
                         </div>
                       </div>
-                    );
-                  })
-                ) : (
-                  <p className="flex items-center justify-center text-center text-sm font-medium text-gray-900">
-                    Your cart is empty. Add some items to proceed.
+                    </div>
+                  </div>
+                  <div className="mx-auto mt-6 max-w-4xl flex-1 space-y-6 lg:mt-0 lg:w-full">
+                    <div
+                      className={`space-y-4 rounded-[15px] border-2 bg-transparent p-4 shadow-sm ${
+                        darkMode ? "border-[#F2613F]" : "border-black"
+                      }  sm:p-6`}
+                    >
+                      <p
+                        className={`text-xl font-semibold ${
+                          darkMode ? "text-white" : "text-black"
+                        } font-museo`}
+                      >
+                        Order summary
+                      </p>
+                      <div className="space-y-4">
+                        <div className="space-y-2">
+                          <dl className="flex items-center justify-between gap-4">
+                            <dt
+                              className={`text-base font-normal font-museo ${
+                                darkMode ? "text-white" : "text-gray-600"
+                              }`}
+                            >
+                              Original price
+                            </dt>
+                            <dd
+                              className={`text-base font-medium font-museo ${
+                                darkMode ? "text-white" : "text-black"
+                              }`}
+                            >
+                              &#8377;{items.price}
+                            </dd>
+                          </dl>
+                          <dl className="flex items-center justify-between gap-4">
+                            <dt
+                              className={`text-base font-normal font-museo ${
+                                darkMode ? "text-white" : "text-gray-600"
+                              }`}
+                            >
+                              Savings
+                            </dt>
+                            <dd className="text-base font-medium font-museo text-green-600">
+                              -&#8377;299.00
+                            </dd>
+                          </dl>
+                          <dl className="flex items-center justify-between gap-4">
+                            <dt
+                              className={`text-base font-normal font-museo ${
+                                darkMode ? "text-white" : "text-gray-600"
+                              }`}
+                            >
+                              Store Pickup
+                            </dt>
+                            <dd
+                              className={`text-base font-normal font-museo ${
+                                darkMode ? "text-white" : "text-black"
+                              }`}
+                            >
+                              &#8377;99
+                            </dd>
+                          </dl>
+                          <dl className="flex items-center justify-between gap-4">
+                            <dt
+                              className={`text-base font-normal font-museo ${
+                                darkMode ? "text-white" : "text-gray-600"
+                              }`}
+                            >
+                              Tax
+                            </dt>
+                            <dd
+                              className={`text-base font-normal font-museo ${
+                                darkMode ? "text-white" : "text-black"
+                              }`}
+                            >
+                              &#8377;799
+                            </dd>
+                          </dl>
+                        </div>
+                        <dl className="flex items-center justify-between gap-4 border-t border-gray-200 pt-2 dark:border-gray-700">
+                          <dt
+                            className={`text-base font-bold font-museo ${
+                              darkMode ? "text-white" : "text-black"
+                            }`}
+                          >
+                            Total
+                          </dt>
+                          <dd
+                            className={`text-base font-bold font-museo ${
+                              darkMode ? "text-white" : "text-black"
+                            }`}
+                          >
+                            &#8377;8,191.00
+                          </dd>
+                        </dl>
+                      </div>
+                      <a
+                        href="#"
+                        className="flex w-full items-center justify-center font-museo rounded-lg bg-[#F2613F] px-5 py-2.5 text-sm font-medium text-white hover:bg-[#481E14] outline-none"
+                      >
+                        Proceed to Checkout
+                      </a>
+                      <div className="flex items-center justify-center gap-2">
+                        <span className="text-sm font-normal font-museo text-gray-500 dark:text-gray-400">
+                          {" "}
+                          or{" "}
+                        </span>
+                        <Link
+                          to={"/products"}
+                          href="#"
+                          title=""
+                          className="inline-flex items-center gap-2 text-sm font-medium font-museo text-[#F2613F] underline hover:no-underline"
+                        >
+                          Continue Shopping
+                          <svg
+                            className="h-5 w-5"
+                            aria-hidden="true"
+                            xmlns="http://www.w3.org/2000/svg"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                          >
+                            <path
+                              stroke="currentColor"
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                              strokeWidth={2}
+                              d="M19 12H5m14 0-4 4m4-4-4-4"
+                            />
+                          </svg>
+                        </Link>
+                      </div>
+                    </div>
+                    <div
+                      className={`space-y-4 rounded-[15px] border-2 ${
+                        darkMode ? "border-[#F2613F]" : "border-black"
+                      }  bg-transparent p-4 shadow-sm sm:p-6`}
+                    >
+                      <form className="space-y-4">
+                        <div>
+                          <label
+                            htmlFor="voucher"
+                            className={`mb-2 block text-sm font-medium font-museo ${
+                              darkMode ? "text-white" : "text-gray-900"
+                            }`}
+                          >
+                            {" "}
+                            Do you have a voucher or gift card?{" "}
+                          </label>
+                          <input
+                            type="text"
+                            id="voucher"
+                            className={`block w-full font-museo rounded-lg border-2 ${
+                              darkMode ? "border-gray-300" : "border-black"
+                            }  bg-transparent p-2.5 text-sm ${
+                              darkMode ? "text-white" : "text-black"
+                            } outline-none`}
+                            placeholder=""
+                            required=""
+                          />
+                        </div>
+                        <button
+                          type="submit"
+                          className="flex w-full items-center justify-center rounded-lg bg-[#F2613F] px-5 py-2.5 text-sm font-medium font-museo text-white hover:bg-[#481E14]"
+                        >
+                          Apply Code
+                        </button>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+              );
+            })
+          ) : (
+            <>
+              <div className="w-[80%] mx-auto grid grid-cols-1 py-7">
+                <div className="flex flex-col justify-center items-center gap-4">
+                  <img
+                    src={assests.emptycart}
+                    alt="emptycart-img"
+                    className="md:w-[300px]"
+                  />
+                  <p
+                    className={`flex items-center justify-center font-museo text-center text-[16px] font-bold ${
+                      darkMode ? "text-slate-300" : "text-gray-900"
+                    } `}
+                  >
+                    Your cart is Empty
                   </p>
-                )}
-              </div>
-            </div>
-            <div className="mx-auto mt-6 max-w-4xl flex-1 space-y-6 lg:mt-0 lg:w-full">
-              <div
-                className={`space-y-4 rounded-[15px] border-2 bg-transparent p-4 shadow-sm ${
-                  darkMode ? "border-[#F2613F]" : "border-black"
-                }  sm:p-6`}
-              >
-                <p
-                  className={`text-xl font-semibold ${
-                    darkMode ? "text-white" : "text-black"
-                  } font-museo`}
-                >
-                  Order summary
-                </p>
-                <div className="space-y-4">
-                  <div className="space-y-2">
-                    <dl className="flex items-center justify-between gap-4">
-                      <dt
-                        className={`text-base font-normal font-museo ${
-                          darkMode ? "text-white" : "text-gray-600"
-                        }`}
-                      >
-                        Original price
-                      </dt>
-                      <dd
-                        className={`text-base font-medium font-museo ${
-                          darkMode ? "text-white" : "text-black"
-                        }`}
-                      >
-                        &#8377;7,592.00
-                      </dd>
-                    </dl>
-                    <dl className="flex items-center justify-between gap-4">
-                      <dt
-                        className={`text-base font-normal font-museo ${
-                          darkMode ? "text-white" : "text-gray-600"
-                        }`}
-                      >
-                        Savings
-                      </dt>
-                      <dd className="text-base font-medium font-museo text-green-600">
-                        -&#8377;299.00
-                      </dd>
-                    </dl>
-                    <dl className="flex items-center justify-between gap-4">
-                      <dt
-                        className={`text-base font-normal font-museo ${
-                          darkMode ? "text-white" : "text-gray-600"
-                        }`}
-                      >
-                        Store Pickup
-                      </dt>
-                      <dd
-                        className={`text-base font-normal font-museo ${
-                          darkMode ? "text-white" : "text-black"
-                        }`}
-                      >
-                        &#8377;99
-                      </dd>
-                    </dl>
-                    <dl className="flex items-center justify-between gap-4">
-                      <dt
-                        className={`text-base font-normal font-museo ${
-                          darkMode ? "text-white" : "text-gray-600"
-                        }`}
-                      >
-                        Tax
-                      </dt>
-                      <dd
-                        className={`text-base font-normal font-museo ${
-                          darkMode ? "text-white" : "text-black"
-                        }`}
-                      >
-                        &#8377;799
-                      </dd>
-                    </dl>
-                  </div>
-                  <dl className="flex items-center justify-between gap-4 border-t border-gray-200 pt-2 dark:border-gray-700">
-                    <dt
-                      className={`text-base font-bold font-museo ${
-                        darkMode ? "text-white" : "text-black"
-                      }`}
-                    >
-                      Total
-                    </dt>
-                    <dd
-                      className={`text-base font-bold font-museo ${
-                        darkMode ? "text-white" : "text-black"
-                      }`}
-                    >
-                      &#8377;8,191.00
-                    </dd>
-                  </dl>
-                </div>
-                <a
-                  href="#"
-                  className="flex w-full items-center justify-center font-museo rounded-lg bg-[#F2613F] px-5 py-2.5 text-sm font-medium text-white hover:bg-[#481E14] outline-none"
-                >
-                  Proceed to Checkout
-                </a>
-                <div className="flex items-center justify-center gap-2">
-                  <span className="text-sm font-normal font-museo text-gray-500 dark:text-gray-400">
-                    {" "}
-                    or{" "}
-                  </span>
-                  <Link
-                    to={"/products"}
-                    href="#"
-                    title=""
-                    className="inline-flex items-center gap-2 text-sm font-medium font-museo text-[#F2613F] underline hover:no-underline"
+                  <p
+                    className={`flex items-center justify-center font-museo text-center text-[10px] font-medium ${
+                      darkMode ? "text-slate-300" : "text-gray-900"
+                    } `}
                   >
-                    Continue Shopping
-                    <svg
-                      className="h-5 w-5"
-                      aria-hidden="true"
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        stroke="currentColor"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M19 12H5m14 0-4 4m4-4-4-4"
-                      />
-                    </svg>
-                  </Link>
+                    Looks like you have not added anything to you cart. Go ahead
+                    & explore top categories.
+                  </p>
                 </div>
               </div>
-              <div
-                className={`space-y-4 rounded-[15px] border-2 ${
-                  darkMode ? "border-[#F2613F]" : "border-black"
-                }  bg-transparent p-4 shadow-sm sm:p-6`}
-              >
-                <form className="space-y-4">
-                  <div>
-                    <label
-                      htmlFor="voucher"
-                      className={`mb-2 block text-sm font-medium font-museo ${
-                        darkMode ? "text-white" : "text-gray-900"
-                      }`}
-                    >
-                      {" "}
-                      Do you have a voucher or gift card?{" "}
-                    </label>
-                    <input
-                      type="text"
-                      id="voucher"
-                      className={`block w-full font-museo rounded-lg border-2 ${
-                        darkMode ? "border-gray-300" : "border-black"
-                      }  bg-transparent p-2.5 text-sm ${
-                        darkMode ? "text-white" : "text-black"
-                      } outline-none`}
-                      placeholder=""
-                      required=""
-                    />
-                  </div>
-                  <button
-                    type="submit"
-                    className="flex w-full items-center justify-center rounded-lg bg-[#F2613F] px-5 py-2.5 text-sm font-medium font-museo text-white hover:bg-[#481E14]"
-                  >
-                    Apply Code
-                  </button>
-                </form>
-              </div>
-            </div>
-          </div>
+            </>
+          )}
         </div>
       </section>
     </>
