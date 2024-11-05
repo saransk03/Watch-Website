@@ -2,8 +2,8 @@ import React, { useContext } from "react";
 import UseFetchData from "../../Hooks/UseFetchData";
 import { ThemeContext } from "../../Contexts/ThemeContext";
 import { GiRoundStar } from "react-icons/gi";
-import { ShimmerSimpleGallery } from "react-shimmer-effects";
 import { Link } from "react-router-dom";
+import { Watch } from "react-loader-spinner";
 
 const FeaturedCollection = () => {
     const { isLoading, data } = UseFetchData();
@@ -12,7 +12,16 @@ const FeaturedCollection = () => {
     if (isLoading){
       return(
         <div className="w-[90%] mx-auto grid grid-cols-1 py-3">
-          <ShimmerSimpleGallery card imageHeight={300} caption />
+          <Watch
+              visible={true}
+              height="100"
+              width="100"
+              radius="48"
+              color="#F2613F"
+              ariaLabel="watch-loading"
+              wrapperStyle={{}}
+              wrapperClass=""
+            />
         </div>
       )
     }else{

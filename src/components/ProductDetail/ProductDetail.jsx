@@ -4,6 +4,7 @@ import { FaArrowLeftLong } from "react-icons/fa6";
 import { ThemeContext } from "../../Contexts/ThemeContext";
 import { ShimmerContentBlock } from "react-shimmer-effects";
 import { CartContext } from "../../Contexts/UseCartContext";
+import { Watch } from "react-loader-spinner";
 
 const ProductDetail = () => {
   const { darkMode } = useContext(ThemeContext);
@@ -11,7 +12,8 @@ const ProductDetail = () => {
   const { id } = useParams();
   const [isLoading, setIsLoading] = useState(true); // Start with loading state as true
   const [data, setData] = useState([]); // Set initial data to null
-
+  console.log("cart",cart)
+  console.log("data", data)
   useEffect(() => {
     fetchData();
   }, [id]);
@@ -23,7 +25,6 @@ const ProductDetail = () => {
       const result = await res.json();
       const productId = parseInt(id);
       const product = result.find((item) => item.id == productId);
-      console.log(result)
       setData(product);
     } catch (err) {
       console.error("Error fetching data:", err);
@@ -34,13 +35,23 @@ const ProductDetail = () => {
 
   if (isLoading) {
     return (
-      <ShimmerContentBlock
-        title
-        text
-        cta
-        thumbnailWidth={370}
-        thumbnailHeight={370}
-      />
+      <div
+      className={`2xl:container mx-auto ${darkMode? 'bg-black':'bg-white'}`}>
+      <div className="w-[90%] h-screen mx-auto grid grid-cols-1 py-3">
+        <div className="flex justify-center items-center">
+          <Watch
+            visible={true}
+            height="100"
+            width="100"
+            radius="48"
+            color="#F2613F"
+            ariaLabel="watch-loading"
+            wrapperStyle={{}}
+            wrapperClass=""
+          />
+        </div>
+      </div>
+    </div>
     );
   } else {
     return (

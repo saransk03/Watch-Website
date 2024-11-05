@@ -6,10 +6,13 @@ import { RxCross2 } from "react-icons/rx";
 import { useContext, useState } from "react";
 import { ThemeContext } from "../../Contexts/ThemeContext";
 import ResponseNav from "./ResponseNav";
+import { CartContext } from "../../Contexts/UseCartContext";
 
 function Navbar() {
   const { darkMode, toggleDarkMode } = useContext(ThemeContext);
   const [menu, setMenu] = useState(false);
+  const { cartLength } = useContext(CartContext);
+  console.log(cartLength);
 
   const toggleMenu = () => {
     setMenu(!menu);
@@ -87,11 +90,12 @@ function Navbar() {
             </div>
             <div className="lg:flex hidden gap-4">
               <div className="relative flex items-center justify-center icons">
-                <Link to={"/cart"}>
+                <Link to={"/cart"} className="relative">
                   <FiShoppingBag
                     size="20"
-                    className={`${darkMode ? "text-[#F2613F]" : "text-black"}`}
+                    className={`${darkMode ? "text-[#F2613F]" : "text-black"} `}
                   />
+                  <span className="bg-[#F2613F] absolute top-0 right-[-6px] w-[12px] h-[12px] rounded-[12px] font-museo text-[9px] flex justify-center items-center text-white font-medium">{cartLength}</span>
                 </Link>
                 <p className="nav-icons">Cart</p>
               </div>

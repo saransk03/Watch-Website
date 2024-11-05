@@ -1,14 +1,12 @@
 import { useContext, useEffect, useState } from "react";
-import { ShimmerSimpleGallery } from "react-shimmer-effects";
 import ProductCard from "./ProductCard";
 import { ThemeContext } from "../../Contexts/ThemeContext";
 import UseFetchData from "../../Hooks/UseFetchData";
+import { Watch } from 'react-loader-spinner'
 
 const Product = () => {
   const { darkMode } = useContext(ThemeContext);
   const { data, isLoading } = UseFetchData();
-  
-
 
   // const category = ["Men", "Women", "Unisex"];
 
@@ -42,7 +40,7 @@ const Product = () => {
   //   } else {
   //     const updatedItems = data.filter((item) => {
   //       return selectfilter.includes(item.gender); // Assuming `gender` is the key in `data` for category
-        
+
   //     });
   //     setFilterItems(updatedItems);
   //   }
@@ -51,12 +49,20 @@ const Product = () => {
   if (isLoading) {
     return (
       <div
-        className={`2xl:container mx-auto ${
-          darkMode ? "bg-black" : "bg-white"
-        } transition-all duration-300`}
-      >
-        <div className="w-[90%] mx-auto grid grid-cols-1 py-3">
-          <ShimmerSimpleGallery card imageHeight={300} caption />
+        className={`2xl:container mx-auto ${darkMode? 'bg-black':'bg-white'}`}>
+        <div className="w-[90%] h-screen mx-auto grid grid-cols-1 py-3">
+          <div className="flex justify-center items-center">
+            <Watch
+              visible={true}
+              height="100"
+              width="100"
+              radius="48"
+              color="#F2613F"
+              ariaLabel="watch-loading"
+              wrapperStyle={{}}
+              wrapperClass=""
+            />
+          </div>
         </div>
       </div>
     );
@@ -74,8 +80,8 @@ const Product = () => {
                 className={`${
                   darkMode ? "text-white" : "text-black"
                 } font-[900] font-negita text-[20px] lg:text-[30px] tracking-widest`}
-                 data-aos="zoom-out-down"
-              data-aos-duration="1000"
+                data-aos="zoom-out-down"
+                data-aos-duration="1000"
               >
                 Our Products
               </h1>
