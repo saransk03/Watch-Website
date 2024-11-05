@@ -5,7 +5,7 @@
 /* src/index.css */
 @font-face {
   font-family: "Negita";
-  src: url("./fonts/Negita.otf") format("opentype");
+  src: url("/public/fonts/Negita.otf") format("opentype");
   font-weight: normal;
   font-style: normal;
 }
@@ -106,11 +106,7 @@
   opacity: 1;
   transition: all 0.3s ease;
 }
-.ads-1 {
-  background-image: url(./assests/ads.jpg);
-  background-position: center;
-  background-size: cover;
-}
+
 
 .brand-wrapper{
   display: flex;
