@@ -9,7 +9,7 @@ const ProductCard = ({product}) => {
 
   return (
     <>
-      <div className={`bg-transparent border-[2px] group hover:scale-125 rounded-md py-3 px-3 w-[180px] md:w-[250px] relative product-card ${darkMode? 'shadow-white' : 'shadow-black'} transition-all duration-300`}
+      <div className={`bg-transparent border-[2px] group group-hover:scale-125 rounded-md py-3 px-3 w-[180px] md:w-[250px] relative product-card ${darkMode? 'shadow-white' : 'shadow-black'} transition-all duration-300`}
        data-aos="flip-right"
        data-aos-duration="1000"
        >
