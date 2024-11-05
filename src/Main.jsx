@@ -10,7 +10,7 @@ import {
 } from "react-router-dom";
 import Footer from "./components/Footer/Footer";
 import Errorpage from "./components/Errorpage/Errorpage";
-import Body from "./pages/Body";
+import Body from "./Body";
 import Product from "./components/Product/Product";
 import Contact from "./components/Contact/Contact";
 import About from "./components/About/About";
