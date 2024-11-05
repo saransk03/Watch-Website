@@ -12,7 +12,7 @@ export default defineConfig({
   },
   build: {
     rollupOptions: {
-      input: path.resolve(__dirname, 'src/main.jsx'),  // Use absolute path for the entry
+      input: path.resolve(__dirname, '/src/main.jsx'),  // Use absolute path for the entry
     },
   },
 });
