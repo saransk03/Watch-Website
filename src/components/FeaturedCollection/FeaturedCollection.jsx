@@ -27,9 +27,9 @@ const FeaturedCollection = () => {
             <div className="w-[90%] md:w-[80%] mx-auto grid grid-cols-1 py-4">
                 <div className="flex flex-wrap md: flex-grow justify-evenly items-center gap-2 md:gap-5">
                     {data.slice(3, 7).map((product) => (
-                        <div className={`bg-transparent border-[2px] rounded-md py-3 px-3 w-[180px] md:w-[250px] relative product-card ${darkMode? 'shadow-white' : 'shadow-black'} transition-all duration-300`} data-aos="flip-right"
+                        <div className={`bg-transparent border-[2px] rounded-md py-3 px-3 w-[180px] md:w-[250px] group hover:scale-125 relative ${darkMode? 'shadow-white' : 'shadow-black'} transition-all duration-300`} data-aos="flip-right"
                         data-aos-duration="1000">
-                        <img src={product.image} alt="" className="rounded-md " />
+                        <img src={product.image} alt="" className="rounded-md group-hover:scale-110 transition-all duration-300" />
                         <h3 className={`font-museo text-start font-[600] text-[15px] mt-1 ${darkMode? 'text-white': 'text-black'}`}>
                           {product.model}, {product.color}
                         </h3>
