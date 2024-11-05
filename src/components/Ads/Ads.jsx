@@ -1,5 +1,4 @@
 import { assests } from "../../../public/assests/assests";
-import "./index.css";
 
 const Ads = () => {
   return (
