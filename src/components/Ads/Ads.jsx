@@ -6,7 +6,7 @@ const Ads = () => {
         <div className="2xl:container mx-auto py-2">
             <div className="w-[90%] md:w-[80%] mx-auto grid grid-cols-1">
                 <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-                    <div className="ads-1 w-[300px] h-[150px] md:w-[600px] md:h-[300px] rounded-[20px] flex flex-col justify-center items-start px-[3rem]" data-aos="fade-right"
+                    <div className="bg-[url('/public/assests/ads.jpg')] bg-cover bg-center w-[300px] h-[150px] md:w-[600px] md:h-[300px] rounded-[20px] flex flex-col justify-center items-start px-[3rem]" data-aos="fade-right"
               data-aos-duration="1000">
                       <h1 className="font-keania text-white text-[30px] md:text-[55px] font-[800] text-start" data-aos="fade-right"
               data-aos-duration="1000">Explore</h1>
