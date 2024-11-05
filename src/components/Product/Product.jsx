@@ -68,12 +68,12 @@ const Product = () => {
             darkMode ? "bg-black" : "bg-white"
           } transition-all duration-300`}
         >
-          <div className="w-[80%] mx-auto grid grid-cols-1 py-3">
+          <div className="w-[95%] lg:w-[80%] mx-auto grid grid-cols-1 py-3">
             <div className="flex flex-col justify-center items-center">
               <h1
                 className={`${
                   darkMode ? "text-white" : "text-black"
-                } font-[900] font-negita text-[30px] tracking-widest`}
+                } font-[900] font-negita text-[20px] lg:text-[30px] tracking-widest`}
                  data-aos="zoom-out-down"
               data-aos-duration="1000"
               >
@@ -95,7 +95,7 @@ const Product = () => {
               ))}
             </div> */}
 
-            <div className="flex flex-wrap justify-center items-center gap-7 py-5">
+            <div className="flex flex-wrap justify-center items-center gap-2 lg:gap-7 py-5">
               {data.map((items) => {
                 return <ProductCard key={items.id} product={items} />;
               })}

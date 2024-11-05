@@ -120,7 +120,7 @@ const Review = () => {
                     key={review.id}
                     className={`flex flex-col justify-center items-center border-2 ${
                       darkMode ? " border-black" : "border-white"
-                    } px-4 py-1 rounded-md shadow-md w-[280px] h-[180px] md:w-[200px] md:h-[180px] lg:w-[250px] lg:h-[280px] mx-3 md:mx-2`}
+                    } px-4 py-1 rounded-md shadow-md w-[250px] h-[180px] md:w-[200px] md:h-[180px] lg:w-[250px] lg:h-[280px] mx-auto md:mx-2`}
                     data-aos="zoom-out-down"
               data-aos-duration="1000"
                   >

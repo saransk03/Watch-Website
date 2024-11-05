@@ -9,12 +9,12 @@ const ProductCard = ({product}) => {
 
   return (
     <>
-      <div className={`bg-transparent border-[2px] group group-hover:scale-125 rounded-md py-3 px-3 w-[180px] md:w-[250px] relative product-card ${darkMode? 'shadow-white' : 'shadow-black'} transition-all duration-300`}
+      <div className={`bg-transparent border-[2px] group group-hover:scale-125 rounded-md py-3 px-3 w-[150px] md:w-[250px] relative product-card ${darkMode? 'shadow-white' : 'shadow-black'} transition-all duration-300`}
        data-aos="flip-right"
        data-aos-duration="1000"
        >
         <img src={product.image} alt="" className="rounded-md group-hover:scale-110 transition-all duration-300" />
-        <h3 className={`font-museo text-start font-[600] text-[15px] mt-1 ${darkMode? 'text-white': 'text-black'}`}>
+        <h3 className={`font-museo text-start font-[600] text-[10px] md:text-[15px] mt-1 ${darkMode? 'text-white': 'text-black'}`}>
           {product.model}, {product.color}
         </h3>
         <p className="text-start text-[10px] font-negita capitalize font-[800] text-gray-500 tracking-widest ">
@@ -35,7 +35,7 @@ const ProductCard = ({product}) => {
           to={`/product-detail/${product.id}`}
           className=" flex justify-center items-center"
         >
-          <button className="bg-[#9B3922] mt-2 font-museo font-[500] text-white rounded-md w-[100%] py-2 text-[12px]">
+          <button className="bg-[#9B3922] mt-2 font-museo font-[500] text-white rounded-md w-[100%] py-1 md:py-2 text-[9px] md:text-[12px]">
             More Info
           </button>
         </Link>

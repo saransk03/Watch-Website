@@ -173,18 +173,15 @@ const Footer = () => {
             </div>
           </div>
 
-          <div className="flex flex-col justify-start items-start px-3 py-4">
+          <div className="flex flex-col justify-start items-start px-3 py-4" >
             <h1
               className={`${
                 darkMode ? "text-black" : "text-white"
               } font-keania font-[700] text-[20px] tracking-widest`}
-              data-aos="fade-left"
-              data-aos-duration="1000"
             >
               Follow Us
             </h1>
-            <div className="flex gap-5 mt-4" data-aos="fade-left"
-              data-aos-duration="1000">
+            <div className="flex gap-5 mt-4" >
               <>
                 <FaInstagram
                   className={`text-[13px] font-museo hover:text-white ${

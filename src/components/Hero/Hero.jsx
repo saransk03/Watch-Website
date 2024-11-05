@@ -7,7 +7,7 @@ const Hero = () => {
   return (
     <>
       <div className="container mx-auto py-2">
-        <div className={`w-[90%] md:w-[90%] video-back h-[180px] lg:h-[450px] md:mb-[20px] overflow-hidden rounded-[20px] relative mx-auto grid grid-cols-1 ${darkMode? 'shadow-sm shadow-[#a93c24]':''}`} data-aos="zoom-in-down"
+        <div className={`w-[90%] md:w-[80%] video-back h-[180px] lg:h-[450px] md:mb-[20px] overflow-hidden rounded-[20px] relative mx-auto grid grid-cols-1 ${darkMode? 'shadow-sm shadow-[#a93c24]':''}`} data-aos="zoom-in-down"
               data-aos-duration="1000">
           <video autoPlay loop muted playsInline>
             <source
