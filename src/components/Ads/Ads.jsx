@@ -1,19 +1,25 @@
+import { useContext } from "react";
 import { assests } from "../../../public/assests/assests";
+import { ThemeContext } from "../../Contexts/ThemeContext";
 
 const Ads = () => {
+        const {darkMode} = useContext(ThemeContext)
   return (
     <>
         <div className="2xl:container mx-auto py-2">
             <div className="w-[90%] md:w-[80%] mx-auto grid grid-cols-1">
                 <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-                    <div className="bg-cover bg-center w-[300px] h-[150px] md:w-[600px] md:h-[300px] rounded-[20px] flex flex-col justify-center items-start px-[3rem]" data-aos="fade-right"
-              data-aos-duration="1000" style={{ backgroundImage: 'url(/assests/ads.jpg)' }}>
-                      <h1 className="font-keania text-white text-[30px] md:text-[55px] font-[800] text-start" data-aos="fade-right"
-              data-aos-duration="1000">Explore</h1>
-                      <p className=" font-museo text-white text-[16px] md:text-[25px] font-[600] text-start mt-[-6px] md:mt-[-12px]" data-aos="fade-right"
-              data-aos-duration="1000">Lifestyle</p>
-                      <p className=" font-museo text-white text-[8px] md:text-[12px] font-[600] text-start leading-1" data-aos="fade-right"
-              data-aos-duration="1000">start @1200</p>
+                    <div className={` ${darkMode? 'border-2 border-white':'bg-black'} transition-all duration-300 w-[300px] h-[150px] md:w-[600px] md:h-[300px] rounded-[20px] gap-5 flex justify-center items-center px-[3rem]" data-aos="fade-right"
+              data-aos-duration="1000`}>
+                      <div className="flex flex-col justify-center items-start">
+                              <h1 className="font-keania text-white text-[30px] md:text-[55px] font-[800] text-start" data-aos="fade-right"
+                      data-aos-duration="1000">Explore</h1>
+                              <p className=" font-museo text-white text-[16px] md:text-[25px] font-[600] text-start mt-[-6px] md:mt-[-12px]" data-aos="fade-right"
+                      data-aos-duration="1000">Lifestyle</p>
+                              <p className=" font-museo text-white text-[8px] md:text-[12px] font-[600] text-start leading-1" data-aos="fade-right"
+                      data-aos-duration="1000">start @1200</p>
+                      </div>
+                      <img src={assests.ads} alt="" className="lg:w-[250px] w-[120px]"/>
                     </div>
                     <div className="bg-[#481E14] w-[300px] h-[150px] md:w-[600px] flex  justify-around items-center md:h-[300px] rounded-[20px]" data-aos="fade-left"
               data-aos-duration="1000">
