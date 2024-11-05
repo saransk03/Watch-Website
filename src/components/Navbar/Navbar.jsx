@@ -25,13 +25,13 @@ function Navbar() {
         <nav className="w-[90%] mx-auto grid grid-cols-1 py-2">
           <div className="flex justify-between lg:justify-around items-center">
             <div className="flex justify-center items-center flex-col my-auto">
-              <h1
+              <Link to={"/"}
                 className={`${
                   darkMode ? "text-[#F2613F]" : "text-black"
                 } font-negita mx-[5px] text-[24px] md:text-[30px]`}
               >
                 Leo Watches
-              </h1>
+              </Link>
             </div>
             <div className="lg:flex hidden">
               <ul className="flex gap-10">
