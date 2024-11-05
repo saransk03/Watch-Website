@@ -19,7 +19,7 @@ const ProductDetail = () => {
   const fetchData = async () => {
     try {
       setIsLoading(true);
-      const res = await fetch("http://localhost:3000/products");
+      const res = await fetch("https://my-json-server.typicode.com/saransk03/watch-json/products");
       const result = await res.json();
       const productId = parseInt(id);
       const product = result.find((item) => item.id == productId);

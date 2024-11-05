@@ -14,7 +14,7 @@ const UseFetchData = () => {
       try {
         setIsLoading(true);
         const res = await fetch(
-          "http://localhost:3000/products"
+          "https://my-json-server.typicode.com/saransk03/watch-json/products"
         );
         const data = await res.json();
         setData(data);
