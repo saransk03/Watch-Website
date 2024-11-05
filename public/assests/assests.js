@@ -1,5 +1,4 @@
 import logo from './logo.png';
-import ads from './ads.jpg';
 import beltads from './belt-ads.png';
 import showroom from './watch-showroom.webp';
 import rolex from './rolex.png'
@@ -23,7 +22,6 @@ import emptycart from './emptycart.png'
 
 export const assests = {
         logo,
-        ads,
         beltads,
         showroom,
         rolex,

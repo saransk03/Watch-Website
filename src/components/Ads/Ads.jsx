@@ -7,7 +7,7 @@ const Ads = () => {
             <div className="w-[90%] md:w-[80%] mx-auto grid grid-cols-1">
                 <div className="flex flex-col md:flex-row justify-between items-center gap-4">
                     <div className="bg-cover bg-center w-[300px] h-[150px] md:w-[600px] md:h-[300px] rounded-[20px] flex flex-col justify-center items-start px-[3rem]" data-aos="fade-right"
-              data-aos-duration="1000" style={{ backgroundImage: `url(${assests.ads})` }}>
+              data-aos-duration="1000" style={{ backgroundImage: 'url(/assests/ads.jpg)' }}>
                       <h1 className="font-keania text-white text-[30px] md:text-[55px] font-[800] text-start" data-aos="fade-right"
               data-aos-duration="1000">Explore</h1>
                       <p className=" font-museo text-white text-[16px] md:text-[25px] font-[600] text-start mt-[-6px] md:mt-[-12px]" data-aos="fade-right"
