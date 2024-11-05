@@ -1,5 +1,5 @@
 import { useContext, useState } from "react";
-import { assests } from "../../assests/assests";
+import { assests } from "../../../public/assests/assests";
 import { ThemeContext } from "../../Contexts/ThemeContext";
 import { Link } from "react-router-dom";
 import { CartContext } from "../../Contexts/UseCartContext";

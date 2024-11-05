@@ -1,4 +1,4 @@
-import { assests } from "../../assests/assests"
+import { assests } from "../../../public/assests/assests"
 
 const Ads = () => {
   return (

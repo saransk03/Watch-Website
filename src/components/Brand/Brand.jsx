@@ -1,6 +1,6 @@
 import { useContext } from "react";
 import { ThemeContext } from "../../Contexts/ThemeContext";
-import { assests } from "../../assests/assests"
+import { assests } from "../../../public/assests/assests"
 
 const Brand = () => {
   const {darkMode} = useContext(ThemeContext)
