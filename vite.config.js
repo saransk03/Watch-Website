@@ -5,7 +5,7 @@ export default defineConfig({
   plugins: [react()],
   build: {
     rollupOptions: {
-      external: ['/src/main.jsx']
+      external: ['./src/main.jsx']
     }
   }
 });
