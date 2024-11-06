@@ -173,15 +173,14 @@
 .brand-6{
   animation-delay:  calc(10s / 6 * (6 - 6) * -1) ;
 }
-.category-btn.active{
+/* .category-btn.active{
   background-color: #F2613F;
-}
+} */
 .product-card{
   box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.5);
   transition: all 0.3s ease;
 }
 .product-card:hover{
-  transform: scale(1.5);
   box-shadow: 0px 0px 10px rgba(253, 110, 0, 0.7);
   transition: all 0.3s ease;
 }
