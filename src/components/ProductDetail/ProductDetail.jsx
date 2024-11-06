@@ -179,36 +179,38 @@ const ProductDetail = () => {
                   </div>
                 </div>
                 <div className="mt-6 sm:gap-4 sm:items-center sm:flex sm:mt-8">
-                  <button
-                    onClick={() => addToCart(data)}
-                    className={`text-white mt-4 sm:mt-0 ${
-                      darkMode
-                        ? "bg-[#F2613F] hover:bg-[#481E14]"
-                        : "bg-[#481E14] hover:bg-[#F2613F]"
-                    } transition-all duration-300  font-medium font-museo rounded-lg text-sm px-5 py-2.5 flex items-center justify-center`}
-                    role="button"
-                    data-aos="fade-left"
-              data-aos-duration="1500"
-                  >
-                    <svg
-                      className="w-5 h-5 -ms-2 me-2"
-                      aria-hidden="true"
-                      xmlns="http://www.w3.org/2000/svg"
-                      width={24}
-                      height={24}
-                      fill="none"
-                      viewBox="0 0 24 24"
+                  <Link to={"/cart"}>
+                    <button
+                      onClick={() => addToCart(data)}
+                      className={`text-white mt-4 sm:mt-0 ${
+                        darkMode
+                          ? "bg-[#F2613F] hover:bg-[#481E14]"
+                          : "bg-[#481E14] hover:bg-[#F2613F]"
+                      } transition-all duration-300  font-medium font-museo rounded-lg text-sm px-5 py-2.5 flex items-center justify-center`}
+                      role="button"
+                      data-aos="fade-left"
+                data-aos-duration="1500"
                     >
-                      <path
-                        stroke="currentColor"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M4 4h1.5L8 16m0 0h8m-8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm.75-3H7.5M11 7H6.312M17 4v6m-3-3h6"
-                      />
-                    </svg>
-                    Add to cart
-                  </button>
+                      <svg
+                        className="w-5 h-5 -ms-2 me-2"
+                        aria-hidden="true"
+                        xmlns="http://www.w3.org/2000/svg"
+                        width={24}
+                        height={24}
+                        fill="none"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          stroke="currentColor"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth={2}
+                          d="M4 4h1.5L8 16m0 0h8m-8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm.75-3H7.5M11 7H6.312M17 4v6m-3-3h6"
+                        />
+                      </svg>
+                      Add to cart
+                    </button>
+                  </Link>
                 </div>
                 <hr className="my-6 md:my-8 border-gray-200 dark:border-gray-800" data-aos="fade-left"
               data-aos-duration="1500"/>
