@@ -32,7 +32,7 @@ const Hero = () => {
               " Elevate Your Look with Every Tick "
             </p>
             <Link to={"/products"} className="z-20">
-              <button className="bg-[#481E14] text-white px-4 py-1.5 rounded-lg text-[10px] md:text-[14px] font-bold font-museo mt-2 md:mt-4" data-aos="flip-right"
+              <button className="bg-[#481E14] hover:bg-[#F2613F] text-white px-4 py-1.5 rounded-lg text-[10px] md:text-[14px] font-bold font-museo mt-2 md:mt-4" data-aos="flip-right"
               data-aos-duration="1200">
                 Shop Now
               </button>

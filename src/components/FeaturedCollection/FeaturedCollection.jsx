@@ -69,7 +69,11 @@ const FeaturedCollection = () => {
                 </div>
                 <div className="flex justify-center items-center mt-5">
                     <Link to={"/products"}>
-                      <button className="bg-[#481E14] px-4 py-2 text-[12px] md:text-[18px] font-bold font-museo text-white rounded-md"  data-aos="fade-up"
+                      <button className={`${
+                        darkMode
+                          ? "bg-[#F2613F] hover:bg-[#481E14]"
+                          : "bg-[#481E14] hover:bg-[#F2613F]"
+                      } transition-all duration-300 px-4 py-2 text-[12px] md:text-[18px] font-bold font-museo text-white rounded-md`}  data-aos="fade-up"
                         data-aos-duration="1000">
                           More Products
                       </button>
