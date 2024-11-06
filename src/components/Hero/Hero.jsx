@@ -7,7 +7,7 @@ const Hero = () => {
   return (
     <>
       <div className="container mx-auto py-2">
-        <div className={`w-[90%] md:w-[90%] video-back h-[180px] lg:h-[450px] md:mb-[20px] overflow-hidden rounded-[20px] relative mx-auto grid grid-cols-1 ${darkMode? 'shadow-sm shadow-[#a93c24]':''}`} data-aos="zoom-in-down"
+        <div className={`w-[90%] md:w-[85%] video-back h-[180px] lg:h-[450px] md:mb-[20px] overflow-hidden rounded-[20px] relative mx-auto grid grid-cols-1 ${darkMode? 'shadow-sm shadow-[#a93c24]':''}`} data-aos="zoom-in-down"
               data-aos-duration="1000">
           <video autoPlay loop muted playsInline>
             <source
@@ -32,7 +32,7 @@ const Hero = () => {
               " Elevate Your Look with Every Tick "
             </p>
             <Link to={"/products"} className="z-20">
-              <button className="bg-[#481E14] hover:bg-[#F2613F] text-white px-4 py-1.5 rounded-lg text-[10px] md:text-[14px] font-bold font-museo mt-2 md:mt-4" data-aos="flip-right"
+              <button className="bg-[#481E14] hover:bg-[#F2613F] transition-all duration-300 text-white px-4 py-1.5 rounded-lg text-[10px] md:text-[14px] font-bold font-museo mt-2 md:mt-4" data-aos="flip-right"
               data-aos-duration="1200">
                 Shop Now
               </button>
